@@ -1,0 +1,22 @@
+.DS_Store
+
+# Dependencies
+**/node_modules
+
+# Nuxt dev/build outputs
+nuxt-app/.nuxt
+nuxt-app/.output
+nuxt-app/.data
+nuxt-app/.nitro
+nuxt-app/.cache
+nuxt-app/dist
+
+# Logs
+**/*.log
+**/logs
+
+# Local env files (never commit secrets)
+**/.env
+**/.env.*
+!**/.env.example
+

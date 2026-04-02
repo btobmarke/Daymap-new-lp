@@ -1,0 +1,17 @@
+service: bee-nuxt-app
+frameworkVersion: "3"
+provider:
+  name: aws
+  stage: dev
+  region: ap-northeast-1
+
+package:
+  patterns:
+    - "!**"
+    - ".output/server/**"
+
+functions:
+  NuxtSsrCore:
+    runtime: nodejs20.x
+    handler: ".output/server/index.handler"
+    url: true

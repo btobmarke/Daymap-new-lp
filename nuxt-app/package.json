@@ -1,0 +1,35 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.540.0",
+    "@aws-sdk/client-ses": "^3.540.0",
+    "@aws-sdk/util-dynamodb": "^3.540.0",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@nuxtjs/gtm": "^2.4.0",
+    "@supabase/supabase-js": "^2.49.4",
+    "express": "^4.19.2",
+    "instagram-graph-api": "^6.1.0",
+    "nuxt": "^3.11.1",
+    "nuxt-swiper": "^1.2.2",
+    "serverless-http": "^3.2.0",
+    "swiper": "^11.0.7",
+    "vite": "^4.0.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
