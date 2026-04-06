@@ -2,28 +2,27 @@
 <script setup>
 import { reactive } from "vue";
 
-const config = useRuntimeConfig();
-
-///モーダル表示条件
-
 /**
  *
  */
 const sendContact = async () => {
-  const url = `${config.public.apiBase}/send_contact_form`;
-
-  const { data: result } = await useFetch(url, {
-    method: "POST",
-    body: JSON.stringify(param),
-    headers: {
-      //例
-      "Content-Type": "application/json",
-    },
-  }).catch((e) => console.log(e));
-
-  let items = result._value.items;
-  //問い合わせ完了モーダル
-  ShowModal(items);
+  try {
+    await $fetch("/api/mail/document-request", {
+      method: "POST",
+      body: {
+        CompanyName: param.company,
+        Name: param.name,
+        Address: param.address,
+        TelephoneNumber: param.tel,
+        EmailAddress: param.mail,
+        ExpectedNumber: String(param.users ?? ""),
+      },
+    });
+    await navigateTo("/download_thanks");
+  } catch (e) {
+    console.error(e);
+    alert("送信に失敗しました。時間をおいて再度お試しください。");
+  }
 };
 
 const param = reactive({

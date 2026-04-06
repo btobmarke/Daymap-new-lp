@@ -1,5 +1,5 @@
-<svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0 350 127" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 127" height="127" width="350" data-type="color" role="presentation" aria-hidden="true" aria-label="">
+<svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362 130" height="130" width="362" role="presentation" aria-hidden="true">
     <g>
-        <path fill="#23BE10" d="m0 0 175 24L350 0v127H0z" data-color="1"></path>
+        <path fill="#23BE10" d="M0 0h362v130H0l42-65z"></path>
     </g>
 </svg>

@@ -2,8 +2,6 @@
 <script setup>
 import { reactive } from "vue";
 
-const config = useRuntimeConfig();
-
 ///モーダル表示条件
 const isModalShow = ref(false);
 const message = ref("");
@@ -12,19 +10,20 @@ const message = ref("");
  *
  */
 const sendContact = async () => {
-  const url = `${config.public.apiBase}/send_contact_form`;
-
-  const { data: result } = await useFetch(url, {
-    method: "POST",
-    body: JSON.stringify(param),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }).catch((e) => console.log(e));
-
-  let items = result._value.items;
-  //問い合わせ完了モーダル
-  ShowModal(items);
+  try {
+    const result = await $fetch("/api/mail/contact", {
+      method: "POST",
+      body: param,
+    });
+    const items = result?.items;
+    if (items) {
+      ShowModal(items);
+    }
+  } catch (e) {
+    console.error(e);
+    message.value = "送信に失敗しました。時間をおいて再度お試しください。";
+    isModalShow.value = true;
+  }
 };
 
 /**

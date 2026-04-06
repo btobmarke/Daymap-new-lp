@@ -1,11 +1,10 @@
-<svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0 360 130" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 130" height="130" width="360" data-type="color" role="presentation" aria-hidden="true" aria-label="">
-    <g>
-        <path fill="#23BE10" d="M0 0h337l42 65-60 65H0l39-65z" data-color="1"></path>
-    </g>
+<svg width="379" height="130" viewBox="0 0 379 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_flow_middle)">
+<path d="M0 0H337L379 65L337 130H0L39 65L0 0Z" fill="#23BE10"/>
+</g>
+<defs>
+<clipPath id="clip0_flow_middle">
+<rect width="379" height="130" fill="white"/>
+</clipPath>
+</defs>
 </svg>
-
-<!-- <svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 130" height="130" width="360">
-  <g>
-    <path fill="#23BE10" d="M0 0h300l60 65-60 65H0l39-65z" />
-  </g>
-</svg> -->

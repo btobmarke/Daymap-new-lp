@@ -454,17 +454,25 @@ body {
 
 
   a.document {
-    width: 73%;
+    width: min(100%, 320px);
+    max-width: 90%;
+    min-height: 56px;
     height: auto;
-    aspect-ratio: 4/1;
-    line-height: 0;
+    padding: 12px 16px;
+    line-height: 1.35;
+    box-sizing: border-box;
+    white-space: nowrap;
   }
 
   a.trial {
-    width: 73%;
+    width: min(100%, 320px);
+    max-width: 90%;
+    min-height: 56px;
     height: auto;
-    aspect-ratio: 4/1;
-    line-height: 0;
+    padding: 12px 16px;
+    line-height: 1.35;
+    box-sizing: border-box;
+    white-space: nowrap;
   }
 
   .btn_area {

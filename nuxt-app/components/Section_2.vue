@@ -5,7 +5,11 @@
     </div>
 
     <div class="contents">
-      <img src="/reduction_image.avif"></img>
+      <img
+        src="/reduction_image.avif"
+        alt="デイマップ導入によるルート作成時間の削減効果"
+        decoding="async"
+      />
     </div>
   </div>
 </template>
@@ -32,17 +36,20 @@
   margin: 0 auto;
   display: flex;
   width: 1200px;
-  height: 799px;
+  height: auto;
   border-radius: 20px;
   flex-direction: column;
+  align-items: center;
   background-color: #FFFFDC;
   column-gap: 40px;
   padding: 0 200px;
 }
 
 .section_2 .contents img {
+  display: block;
   width: 725px;
-  height: 560px;
+  max-width: 100%;
+  height: auto;
   border-radius: 20px;
 }
 

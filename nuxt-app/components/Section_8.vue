@@ -2,8 +2,6 @@
 import Contact from '~/pages/contact.vue';
 import Document_form from '~/pages/document_form.vue';
 
-const config = useRuntimeConfig();
-
 const form = ref({
   company: '',
   name: '',
@@ -19,24 +17,17 @@ const message = ref('');
 
 const submitForm = async () => {
   try {
-    const response = await fetch('https://localhost:5001/api/LandingRequest/document', {
+    await $fetch('/api/mail/document-request', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
+      body: {
         CompanyName: form.value.company,
         Name: form.value.name,
         Address: form.value.address,
         TelephoneNumber: form.value.phone,
         EmailAddress: form.value.email,
-        ExpectedNumber: form.value.users
-      })
+        ExpectedNumber: form.value.users,
+      },
     });
-
-    if (!response.ok) {
-      throw new Error('送信に失敗しました');
-    }
 
     // 成功時の処理
     navigateTo('/download_thanks');

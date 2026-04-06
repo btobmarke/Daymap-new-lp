@@ -162,7 +162,9 @@ ul.btn_area li.navi_login {
 ul.btn_area li.navi_trial {
   display: flex;
   justify-content: center;
-  width: 95px;
+  min-width: 120px;
+  width: auto;
+  padding: 0 6px;
   height: 88px;
   background-color: rgb(16, 172, 251);
   height: 100%;
@@ -190,10 +192,15 @@ ul.btn_area li.navi_trial a {
 
 .label_trial {
   font-size: 12px;
+  white-space: nowrap;
+  line-height: 1.25;
+  text-align: center;
 }
 
 .label_login {
   font-size: 12px;
+  white-space: nowrap;
+  line-height: 1.25;
 }
 
 .toggle {

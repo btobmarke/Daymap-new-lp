@@ -311,15 +311,25 @@ defineProps({
   }
 
   .section_3 a.document {
-    width: 73%;
+    width: min(100%, 320px);
+    max-width: 90%;
+    min-height: 56px;
     height: auto;
-    aspect-ratio: 4/1;
+    padding: 12px 16px;
+    line-height: 1.35;
+    box-sizing: border-box;
+    white-space: nowrap;
   }
 
   .section_3 a.trial {
-    width: 73%;
+    width: min(100%, 320px);
+    max-width: 90%;
+    min-height: 56px;
     height: auto;
-    aspect-ratio: 4/1;
+    padding: 12px 16px;
+    line-height: 1.35;
+    box-sizing: border-box;
+    white-space: nowrap;
   }
 
   .section_3 .btn_area {

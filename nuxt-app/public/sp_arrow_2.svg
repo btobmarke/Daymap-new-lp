@@ -1,5 +1,10 @@
-<svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0 350 151" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 151" height="151" width="350" data-type="color" role="presentation" aria-hidden="true" aria-label="">
-    <g>
-        <path fill="#23BE10" d="m0 0 175 24L350 0v127l-175 24L0 127z" data-color="1"></path>
-    </g>
+<svg width="379" height="130" viewBox="0 0 379 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_flow_sp2)">
+<path d="M0 0H337L379 65L337 130H0L39 65L0 0Z" fill="#23BE10"/>
+</g>
+<defs>
+<clipPath id="clip0_flow_sp2">
+<rect width="379" height="130" fill="white"/>
+</clipPath>
+</defs>
 </svg>

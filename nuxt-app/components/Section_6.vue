@@ -205,8 +205,10 @@
 }
 
 .section_6 .step_arrow {
-  width: 360px;
+  display: block;
+  width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .table {
@@ -281,16 +283,23 @@
 
 .step {
   position: relative;
-  width: 360px;
   height: 130px;
+  flex-shrink: 0;
+}
+
+/* Flow_1 / Flow_2 / Flow_3 の実寸幅に合わせる */
+.step:nth-child(1) {
+  width: 360px;
 }
 
 .step:nth-child(2) {
-  left: -40px
+  width: 379px;
+  left: -40px;
 }
 
 .step:nth-child(3) {
-  left: -70px
+  width: 362px;
+  left: -82.6px;
 }
 
 .step svg {
@@ -576,10 +585,14 @@
   }
 
   a.trial {
-    width: 73%;
+    width: min(100%, 320px);
+    max-width: 90%;
+    min-height: 56px;
     height: auto;
-    aspect-ratio: 4/1;
-    line-height: 0;
+    padding: 12px 16px;
+    line-height: 1.35;
+    box-sizing: border-box;
+    white-space: nowrap;
   }
 
 
@@ -649,8 +662,17 @@
     margin-bottom: 80px;
   }
 
-  .step {
+  /* タブレット: デスクトップ比率を維持（基準幅 360px → 280px） */
+  .step:nth-child(1) {
     width: 280px;
+  }
+
+  .step:nth-child(2) {
+    width: calc(280px * 379 / 360);
+  }
+
+  .step:nth-child(3) {
+    width: calc(280px * 362 / 360);
   }
 }
 </style>
